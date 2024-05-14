@@ -1,0 +1,139 @@
+
+.header{
+    background-color: #131921;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    
+}
+.header_logo{
+ width: 100px;
+ object-fit: contain;
+ margin-left: 20px;
+ margin-right: 20px;
+ margin-top: 18px;
+
+}
+.header__optionBasket {
+    display: flex;
+    align-items: center;
+    color: #fff;
+  }
+
+  .header__basketCount {
+    margin-left: 10px;
+    margin-right: 10px;
+
+  }
+  
+/* Header Navigation */
+.header__nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-right: 10px;
+  }
+
+  .header__option {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .header__optionLineTwo {
+    font-size: 13px;
+    font-weight: 800;
+  }
+  .header__link {
+   
+    color: #fff;
+     text-decoration: none;
+    /* margin-right: 10px;  */
+  }
+
+
+.header__searchIcon{
+    background-color: #cd9042
+}
+
+
+.header__search{
+    display: flex;
+    flex: 1;
+}
+
+.header_searchInput{
+    height: 12px;
+    padding: 10px;
+    border: none;
+    width: 100%;
+}
+
+.header__searchIcon{
+  padding: 5px;
+  height: 22px !important;
+  background-color: #cd9042;
+
+}
+
+
+
+/* header nav section  */
+
+
+  
+  /* Header Link */
+
+  
+  .header__link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Header Option */
+
+  
+  /* Header Option Lines */
+  .header__optionLineOne {
+    font-size: 10px;
+  }
+  
+  
+  
+  /* Header Basket */
+ 
+  
+ 
+
+  /* to make my search bar responsive  */
+  /* Header Search */
+.header__search {
+    display: flex;
+    align-items: center;
+    flex: 1;
+  }
+  
+  .header__searchInput {
+    height: 12px;
+    padding: 10px;
+    border: none;
+    width: 100%;
+  }
+  
+  /* Adjustments for smaller screens */
+  @media screen and (max-width: 768px) {
+    .header__searchInput {
+      height: 10px;
+      padding: 8px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .header__searchInput {
+      height: 8px;
+      padding: 6px;
+    }
+  }
+  
