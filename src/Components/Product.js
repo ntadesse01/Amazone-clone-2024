@@ -3,9 +3,11 @@ import './Product.css';
 import { useStateValue } from './StateProvider';
 
 function Product({ id, title, image, price, rating }) {
-    const [{ basket }, dispatch] = useStateValue(); // Extract basket from state
+    const [{basket}, dispatch] = useStateValue(); // Extract basket from state
     // Implemented the addToBasket function
     const addToBasket = () => {
+        // Add item to basket
+  
         // Dispatch ADD_TO_BASKET action
         dispatch({
             type: "ADD_TO_BASKET",

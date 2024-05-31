@@ -1,9 +1,44 @@
-.checkout__ad{
+ 
+/* Checkout.css */
+
+.checkout {
+    display: flex;
+    padding: 20px;
+    background-color: white;
+    height: max-content;
+ 
+  }
+  
+  .checkout__ad {
     width: 100%;
     margin-bottom: 10px;
+     
+  }
+  
+  .checkout__title {
+    margin-right: 10px;
     padding: 10px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .checkout__basketInfo {
+    margin-top: 20px;
+  }
+  
+  .checkout__basketInfo p {
+    margin-bottom: 10px;
+  }
+  
+  .checkout__basketInfo h2 {
+    margin-bottom: 20px;
+  }
+  
+  .checkout__left {
+    flex: 0.8;
+    margin-right: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+      
+  }
+  /* Define styles for CheckoutProduct component if needed */
+  

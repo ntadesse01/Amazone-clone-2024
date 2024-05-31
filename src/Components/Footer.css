@@ -1,0 +1,58 @@
+/* Footer container */
+footer {
+    background-color: #000;  /* Change to black */
+    color: #fff;  /* White text for good contrast */
+    padding: 50px 20px;  
+}
+
+/* Footer top section */
+.footer-top {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;  
+}
+
+.footer-column {
+    flex: 1 1 250px;  
+    margin-right: 20px;  
+    margin-bottom: 20px;  
+}
+
+/* Footer links */
+.footer-column h3 {
+    font-size: 16px;  
+    margin-bottom: 10px; 
+}
+
+.footer-column a {
+    display: block;
+    color: #bbb;   
+    text-decoration: none; 
+    margin-bottom: 5px; 
+}
+
+.footer-column a:hover {
+    color: #fff;   
+}
+
+/* Footer bottom section */
+.footer-bottom {
+    margin-top: 20px;  
+    text-align: center;
+    font-size: 14px;  
+}
+
+.footer-bottom p {
+    margin: 0;  
+}
+
+/* Add decorative border to footer columns */
+.footer-column {
+    border-right: 1px solid #bbb;   
+    padding-right: 20px;  
+}
+
+.footer-column:last-child {
+    border-right: 0;  
+    padding-right: 0;  
+}

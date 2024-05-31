@@ -1,10 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-// import * as serviceWorker from './Components/serviceWorker';
+import App from './App'; 
 import { StateProvider } from './Components/StateProvider';
 import reducer, { initialState } from './Components/Reducer';
+
+export function register() {
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('./Components/serviceWorker.js')
+        .then(function(registration) {
+          console.log("ServiceWorker registration successful with scope:", registration.scope);
+        })
+        .catch(function(err) {
+          console.log("ServiceWorker registration failed:", err);
+        });
+    });
+  }
+}
 
 ReactDOM.render(
   <React.StrictMode>
@@ -15,5 +28,4 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// eslint-disable-next-line
-serviceWorker.register();
+register();

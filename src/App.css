@@ -1,3 +1,30 @@
  *{
   margin: 0;
  }
+
+ /* src/App.css */
+.App {
+    text-align: center;
+   
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+ /* App.css */
+
+.app {
+  /* Add your styles for the main app container */
+  /* Example styles */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app__content {
+  /* Add your styles for the main content area */
+  /* Example styles */
+  flex: 1;
+  padding: 20px;
+}

@@ -19,4 +19,28 @@
     margin-bottom: -150px;
 
   }
- 
+ .home__row_container{
+    background-color:hsl(0, 7%, 97%);
+ }
+
+ /* Add this CSS to your Home.css file */
+
+.home__row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .product {
+    position: relative;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .product:hover {
+    transform: translateY(-5px); /* Adjust the value as per your preference */
+  }
+  
+  .product:hover img {
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Add shadow effect on hover */
+  }
+  

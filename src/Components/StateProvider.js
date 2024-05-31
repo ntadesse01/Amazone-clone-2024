@@ -5,6 +5,7 @@
 
 // setup data layer
 import React, { createContext, useContext, useReducer } from 'react';
+import Footer from './Footer';
  
 
 //this is the data layer
@@ -15,6 +16,7 @@ export const StateContext = createContext();
 export const StateProvider = ({reducer, initialState, children}) => (
     <StateContext.Provider value={useReducer(reducer, initialState)}>
         {children}
+        {Footer}
     </StateContext.Provider>
     
 );

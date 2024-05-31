@@ -1,54 +1,53 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Header from './Components/Header';
-import Home from "./Components/Home"
-import Checkout from "./Components/Checkout"
-// import Login from "./Components/Login"
+
+import Checkout from './Components/Checkout';
+import Login from './Components/Login';
+import Landing from './Components/Landing';
+import { useStateValue } from './Components/StateProvider';
+import { auth } from './Components/firebase';
 
 function App() {
+  const [{ basket }, dispatch] = useStateValue();
+
+  // useEffect: POWERFUL
+  // PIECE OF CODE WHICH RUNS BASED ON A GIVEN CONDITION
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((authUser) => {
+      if (authUser) {
+        // User is logged in
+        dispatch({
+          type: 'SET_USER',
+          user: authUser,
+        });
+      } else {
+        // User is logged out
+        dispatch({
+          type: 'SET_USER',
+          user: null,
+        });
+      }
+    });
+
+    return () => {
+      // Cleanup function
+      unsubscribe();
+    };
+  }, [dispatch]);
+console.log("USER IS >>>>>>".user)
   return (
-    <Router>
-      <div className="app">
-        <Header />
+    <div className="app">
+      <Router>
         <Routes>
           <Route path="/checkout" element={<Checkout />} />
-          <Route path="/login" element={<h1>Login page</h1>} />
+          <Route path="/login" element={<Login />} />
           {/* Default route */}
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Landing />} />
         </Routes>
-      </div>
-    </Router>
+      </Router>
+    </div>
   );
 }
 
 export default App;
-
-
-
-// // function App() {function App() {
-//   return (
-//     <Router>
-//       <div className="app">
-//         <Routes>
-//         <Route path="/checkout"> 
-//         <Header/>
-//         <Checkout />
-//         <h1>Checkout</h1>
-//         </Route>
-//           <Route path="/login">  
-//           <h1>Login page</h1>
-//           </Route>
-//           {/* this is the default route */}
-//           <Route path="/">  
-//           <Header/>
-//           <Home />
-//           </Route>
-          
-//         </Routes>
-//       </div>
-//     </Router>
-//   );
-// }
-
-// export default App;
